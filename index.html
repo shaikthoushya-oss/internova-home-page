@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>InternNova – Launch Your Career with Real Internships</title>
+<meta name="description" content="InternNova offers mentor-led virtual internships, workshops and certificates for students.">
+<style>
+:root{--bg:#fff;--bg2:#f4f6fb;--tx:#12162b;--mut:#5b6280;--pri:#5b3df5;--pri2:#2fb7ff;--card:#fff;--bd:#e4e7f2;--r:16px}
+@media(prefers-color-scheme:dark){:root{--bg:#0d1020;--bg2:#141830;--tx:#eef0fb;--mut:#a3a9c8;--card:#171b36;--bd:#262b4d}}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background:var(--bg);color:var(--tx);line-height:1.6}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1140px;margin:auto;padding:0 20px}
+section{padding:80px 0}
+.alt{background:var(--bg2)}
+h2{font-size:clamp(1.7rem,4vw,2.4rem);line-height:1.2;margin-bottom:12px}
+.sub{color:var(--mut);max-width:620px;margin-bottom:40px}
+.tag{display:inline-block;font-size:.8rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--pri);margin-bottom:10px}
+.btn{display:inline-block;padding:13px 26px;border-radius:999px;font-weight:600;border:2px solid transparent;transition:.25s;cursor:pointer;font-size:1rem}
+.btn-p{background:linear-gradient(135deg,var(--pri),var(--pri2));color:#fff}
+.btn-p:hover{transform:translateY(-3px);box-shadow:0 10px 25px rgba(91,61,245,.35)}
+.btn-o{border-color:var(--pri);color:var(--pri)}
+.btn-o:hover{background:var(--pri);color:#fff}
+.grid{display:grid;gap:22px}
+.g3{grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.g4{grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:var(--r);padding:26px;transition:.25s}
+.card:hover{transform:translateY(-6px);box-shadow:0 14px 30px rgba(20,24,60,.12)}
+.ico{font-size:1.9rem;margin-bottom:10px}
+.card h3{margin-bottom:6px;font-size:1.15rem}
+.card p,.card li{color:var(--mut);font-size:.96rem}
+/* nav */
+header{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--bd)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:68px}
+.logo{font-weight:800;font-size:1.4rem}.logo span{color:var(--pri)}
+.links{display:flex;gap:26px;align-items:center}
+.links a{font-weight:500;font-size:.95rem}.links a:hover{color:var(--pri)}
+.burger{display:none;background:none;border:0;font-size:1.7rem;color:var(--tx);cursor:pointer}
+/* hero */
+.hero{padding:90px 0 70px;background:radial-gradient(circle at 80% 10%,rgba(47,183,255,.22),transparent 45%),radial-gradient(circle at 10% 90%,rgba(91,61,245,.2),transparent 45%)}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
+.hero h1{font-size:clamp(2.2rem,5.5vw,3.6rem);line-height:1.1;margin-bottom:18px}
+.hero h1 em{font-style:normal;background:linear-gradient(135deg,var(--pri),var(--pri2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{color:var(--mut);font-size:1.1rem;margin-bottom:28px;max-width:520px}
+.hero .cta{display:flex;gap:14px;flex-wrap:wrap}
+.panel{background:var(--card);border:1px solid var(--bd);border-radius:24px;padding:26px;box-shadow:0 20px 50px rgba(20,24,60,.15);animation:float 5s ease-in-out infinite}
+@keyframes float{50%{transform:translateY(-10px)}}
+.panel h4{margin-bottom:14px}
+.row{display:flex;justify-content:space-between;padding:11px 0;border-top:1px solid var(--bd);font-size:.95rem}
+.row b{color:var(--pri)}
+/* about */
+.two{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+.checks li{list-style:none;padding:6px 0;color:var(--mut)}
+.checks li::before{content:"✔ ";color:var(--pri);font-weight:700}
+/* programs */
+.price{font-size:1.5rem;font-weight:800;margin:8px 0}
+.card.feat{border:2px solid var(--pri)}
+/* domains */
+.chips{display:flex;flex-wrap:wrap;gap:12px}
+.chip{padding:12px 20px;border-radius:999px;background:var(--card);border:1px solid var(--bd);font-weight:500;transition:.2s}
+.chip:hover{background:var(--pri);color:#fff;transform:scale(1.05)}
+/* stats */
+.stats{background:linear-gradient(135deg,var(--pri),#2a1a9e);color:#fff;text-align:center}
+.stats .num{font-size:2.6rem;font-weight:800}
+.stats p{opacity:.85}
+/* testimonials */
+.q{font-style:italic;margin-bottom:14px}
+.who{font-weight:600;font-size:.9rem}
+/* faq */
+details{background:var(--card);border:1px solid var(--bd);border-radius:12px;padding:16px 20px;margin-bottom:12px}
+summary{cursor:pointer;font-weight:600}
+details p{margin-top:10px;color:var(--mut)}
+/* cta */
+.final{text-align:center}
+.final .box{background:linear-gradient(135deg,var(--pri),var(--pri2));color:#fff;border-radius:28px;padding:60px 24px}
+.final .btn{background:#fff;color:var(--pri);margin-top:20px}
+/* footer */
+footer{background:#0b0e1f;color:#c4c9e6;padding:50px 0 24px}
+.fg{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:30px;margin-bottom:30px}
+footer h5{color:#fff;margin-bottom:10px}
+footer a{display:block;padding:3px 0;font-size:.93rem}footer a:hover{color:#fff}
+.copy{border-top:1px solid #23284a;padding-top:18px;font-size:.85rem;text-align:center}
+/* reveal */
+.rv{opacity:0;transform:translateY(28px);transition:.7s}
+.rv.on{opacity:1;transform:none}
+@media(max-width:860px){
+.hero .wrap,.two{grid-template-columns:1fr}
+.fg{grid-template-columns:1fr 1fr}
+.burger{display:block}
+.links{position:absolute;top:68px;left:0;right:0;flex-direction:column;background:var(--bg);padding:20px;border-bottom:1px solid var(--bd);display:none}
+.links.open{display:flex}
+section{padding:60px 0}
+}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+
+<header>
+ <div class="wrap nav">
+  <a href="#home" class="logo">Intern<span>Nova</span></a>
+  <button class="burger" id="burger" aria-label="Menu">☰</button>
+  <nav class="links" id="links">
+   <a href="#about">About</a><a href="#programs">Programs</a><a href="#domains">Domains</a>
+   <a href="#why">Why Us</a><a href="#workshops">Workshops</a><a href="#faq">FAQ</a>
+   <a href="#apply" class="btn btn-p" style="padding:9px 20px">Apply Now</a>
+  </nav>
+ </div>
+</header>
+
+<main>
+<section class="hero" id="home">
+ <div class="wrap">
+  <div>
+   <span class="tag">Virtual Internships for Students</span>
+   <h1>Turn your skills into <em>real experience</em></h1>
+   <p>Work on live projects, learn from mentors and earn certificates that make your resume stand out. Start from anywhere, at your own pace.</p>
+   <div class="cta"><a href="#apply" class="btn btn-p">Apply for Internship</a><a href="#programs" class="btn btn-o">Explore Programs</a></div>
+  </div>
+  <div class="panel">
+   <h4>🚀 What you get</h4>
+   <div class="row"><span>Live projects</span><b>Real tasks</b></div>
+   <div class="row"><span>Mentor support</span><b>Weekly</b></div>
+   <div class="row"><span>Certificate</span><b>Included</b></div>
+   <div class="row"><span>Mode</span><b>100% Online</b></div>
+  </div>
+ </div>
+</section>
+
+<section id="about">
+ <div class="wrap two">
+  <div class="rv">
+   <span class="tag">About InternNova</span>
+   <h2>Bridging the gap between classroom and career</h2>
+   <p class="sub" style="margin-bottom:16px">InternNova connects students with practical, mentor-guided internships so they graduate with skills employers actually look for.</p>
+   <ul class="checks"><li>Hands-on, project-based learning</li><li>Structured tasks with clear deadlines</li><li>Feedback from experienced mentors</li><li>Portfolio-ready work and certificates</li></ul>
+  </div>
+  <div class="grid g3 rv" style="grid-template-columns:1fr 1fr">
+   <div class="card"><div class="ico">🎯</div><h3>Mission</h3><p>Make quality internships accessible to every student.</p></div>
+   <div class="card"><div class="ico">👁️</div><h3>Vision</h3><p>A skilled, job-ready generation of learners.</p></div>
+  </div>
+ </div>
+</section>
+
+<section class="alt" id="programs">
+ <div class="wrap">
+  <span class="tag">Internship Programs</span>
+  <h2>Choose the duration that fits you</h2>
+  <p class="sub">Every program includes mentor guidance, projects and a completion certificate.</p>
+  <div class="grid g3">
+   <div class="card rv"><h3>Short Term</h3><div class="price">1 Month</div><p>Quick skill boost with one mini project.</p><br><a href="#apply" class="btn btn-o">Apply</a></div>
+   <div class="card feat rv"><h3>Standard ⭐</h3><div class="price">2 Months</div><p>In-depth learning with multiple projects and reviews.</p><br><a href="#apply" class="btn btn-p">Apply</a></div>
+   <div class="card rv"><h3>Advanced</h3><div class="price">3 Months</div><p>Full-scale project, portfolio building and letter of recommendation.</p><br><a href="#apply" class="btn btn-o">Apply</a></div>
+  </div>
+ </div>
+</section>
+
+<section id="domains">
+ <div class="wrap">
+  <span class="tag">Internship Domains</span>
+  <h2>Pick your path</h2>
+  <p class="sub">Choose from in-demand technology and business fields.</p>
+  <div class="chips rv">
+   <span class="chip">🌐 Web Development</span><span class="chip">📱 App Development</span><span class="chip">🐍 Python Programming</span>
+   <span class="chip">☕ Java Development</span><span class="chip">📊 Data Analytics</span><span class="chip">🤖 AI &amp; Machine Learning</span>
+   <span class="chip">🎨 UI/UX Design</span><span class="chip">🔐 Cyber Security</span><span class="chip">📣 Digital Marketing</span>
+  </div>
+ </div>
+</section>
+
+<section class="alt" id="why">
+ <div class="wrap">
+  <span class="tag">Why Choose InternNova</span>
+  <h2>Built around student success</h2>
+  <p class="sub">&nbsp;</p>
+  <div class="grid g4">
+   <div class="card rv"><div class="ico">🧑‍🏫</div><h3>Expert Mentors</h3><p>Learn from industry professionals.</p></div>
+   <div class="card rv"><div class="ico">🛠️</div><h3>Real Projects</h3><p>Build things that matter, not just theory.</p></div>
+   <div class="card rv"><div class="ico">🏅</div><h3>Certificates</h3><p>Verified proof of your work.</p></div>
+   <div class="card rv"><div class="ico">⏰</div><h3>Flexible</h3><p>Learn online, on your own schedule.</p></div>
+  </div>
+ </div>
+</section>
+
+<section id="mentorship">
+ <div class="wrap two">
+  <div class="rv">
+   <span class="tag">Learning &amp; Mentorship</span>
+   <h2>You are never learning alone</h2>
+   <p class="sub">A simple weekly flow keeps you on track from day one.</p>
+  </div>
+  <div class="rv">
+   <div class="card" style="margin-bottom:14px"><h3>1. Learn</h3><p>Guided tasks and resources every week.</p></div>
+   <div class="card" style="margin-bottom:14px"><h3>2. Build</h3><p>Apply concepts in a real project.</p></div>
+   <div class="card"><h3>3. Review</h3><p>Mentor sessions with feedback and doubt solving.</p></div>
+  </div>
+ </div>
+</section>
+
+<section class="alt" id="workshops">
+ <div class="wrap">
+  <span class="tag">Workshops</span>
+  <h2>Learn beyond the internship</h2>
+  <p class="sub">Regular live sessions to sharpen technical and career skills.</p>
+  <div class="grid g3">
+   <div class="card rv"><div class="ico">💻</div><h3>Coding Bootcamps</h3><p>Hands-on sessions on trending technologies.</p></div>
+   <div class="card rv"><div class="ico">📄</div><h3>Resume &amp; Portfolio</h3><p>Build a profile recruiters notice.</p></div>
+   <div class="card rv"><div class="ico">🎤</div><h3>Interview Prep</h3><p>Mock interviews and career guidance.</p></div>
+  </div>
+ </div>
+</section>
+
+<section class="stats">
+ <div class="wrap grid g4">
+  <div><div class="num" data-to="5000" data-suf="+">0</div><p>Interns Trained</p></div>
+  <div><div class="num" data-to="50" data-suf="+">0</div><p>Expert Mentors</p></div>
+  <div><div class="num" data-to="10" data-suf="+">0</div><p>Domains</p></div>
+  <div><div class="num" data-to="95" data-suf="%">0</div><p>Satisfaction</p></div>
+ </div>
+</section>
+
+<section id="testimonials">
+ <div class="wrap">
+  <span class="tag">Testimonials</span>
+  <h2>What interns say</h2>
+  <p class="sub">Sample feedback – replace with real intern reviews.</p>
+  <div class="grid g3">
+   <div class="card rv"><p class="q">“The mentors explained everything clearly. I built my first full project here.”</p><p class="who">⭐⭐⭐⭐⭐ Priya S., Web Development</p></div>
+   <div class="card rv"><p class="q">“Flexible schedule and real tasks. My portfolio looks much stronger now.”</p><p class="who">⭐⭐⭐⭐⭐ Rahul K., Python</p></div>
+   <div class="card rv"><p class="q">“Weekly doubt sessions helped me a lot. Highly recommended.”</p><p class="who">⭐⭐⭐⭐⭐ Sneha M., Data Analytics</p></div>
+  </div>
+ </div>
+</section>
+
+<section class="alt" id="faq">
+ <div class="wrap" style="max-width:800px">
+  <span class="tag">FAQ</span>
+  <h2>Common questions</h2>
+  <p class="sub">&nbsp;</p>
+  <details><summary>Who can apply?</summary><p>Any student or fresher interested in building practical skills.</p></details>
+  <details><summary>Is the internship online?</summary><p>Yes, all programs run online so you can join from anywhere.</p></details>
+  <details><summary>Will I get a certificate?</summary><p>Yes, a certificate is given after successfully completing the program.</p></details>
+  <details><summary>Do I need prior experience?</summary><p>No. Beginners are welcome, and mentors guide you step by step.</p></details>
+ </div>
+</section>
+
+<section class="final" id="apply">
+ <div class="wrap"><div class="box rv">
+  <h2>Ready to start your journey?</h2>
+  <p>Join InternNova today and build experience that counts.</p>
+  <a href="#" class="btn">Apply Now</a>
+ </div></div>
+</section>
+</main>
+
+<footer>
+ <div class="wrap">
+  <div class="fg">
+   <div><h5 style="font-size:1.3rem">InternNova</h5><p>Empowering students with real-world internship experience.</p></div>
+   <div><h5>Explore</h5><a href="#about">About</a><a href="#programs">Programs</a><a href="#domains">Domains</a></div>
+   <div><h5>Support</h5><a href="#faq">FAQ</a><a href="#workshops">Workshops</a><a href="#apply">Apply</a></div>
+   <div><h5>Contact</h5><a href="mailto:info@example.com">info@example.com</a><a href="#">LinkedIn</a><a href="#">Instagram</a></div>
+  </div>
+  <p class="copy">© 2026 InternNova Redesign Concept. Student project.</p>
+ </div>
+</footer>
+
+<script>
+const burger=document.getElementById('burger'),links=document.getElementById('links');
+burger.addEventListener('click',()=>links.classList.toggle('open'));
+links.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>links.classList.remove('open')));
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}}),{threshold:.15});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+const co=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;
+ const el=e.target,to=+el.dataset.to,suf=el.dataset.suf||'';let n=0;const step=Math.max(1,Math.ceil(to/60));
+ const t=setInterval(()=>{n=Math.min(to,n+step);el.textContent=n+suf;if(n>=to)clearInterval(t)},25);co.unobserve(el)}),{threshold:.5});
+document.querySelectorAll('[data-to]').forEach(el=>co.observe(el));
+</script>
+</body>
+</html>
